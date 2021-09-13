@@ -2,4 +2,18 @@
   <h1>{{ name | uppercase }}</h1>
 </div>
 
-<p-button label="Change name" (click)="showName()"></p-button>
+<button
+  pButton
+  label="Change name"
+  icon="pi pi-check"
+  iconPos="right"
+  class="p-button-help"
+  (click)="showName()"
+></button>
+
+<p-card [header]="name">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+  consequuntur error repudiandae numquam deserunt quisquam repellat libero
+  asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+  neque quas!
+</p-card>
