@@ -9,8 +9,10 @@ import { AppComponent } from './app.component';
 
 // Change locale: Register Spanish
 import localeEs from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs);
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [AppComponent],
