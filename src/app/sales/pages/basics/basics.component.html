@@ -4,7 +4,49 @@
 </div>
 
 <div class="grid">
-  <div class="col-4"><p-card header="uppercase">111</p-card></div>
-  <div class="col-4">2</div>
-  <div class="col-4">3</div>
+  <div class="col-4">
+    <p-card header="uppercase" [subheader]="lowerName | uppercase">
+      {{ lowerName | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" [subheader]="upperName | lowercase">
+      {{ upperName | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase" [subheader]="fullName | titlecase">
+      {{ fullName | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date / Time Pipes</h1>
+  <p>Pipes used to manage dates and times.</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>myDate</li>
+        <li>myDate | date</li>
+        <li>myDate | date: "short"</li>
+        <li>myDate | date: "long"</li>
+        <li>myDate | date: "dd 'de' MMMM 'de' yyyy"</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{ myDate }}</li>
+        <li>{{ myDate | date }}</li>
+        <li>{{ myDate | date: "short" }}</li>
+        <li>{{ myDate | date: "long" }}</li>
+        <li>{{ myDate | date: "dd 'de' MMMM 'de' yyyy" }}</li>
+      </ul>
+    </p-card>
+  </div>
 </div>
