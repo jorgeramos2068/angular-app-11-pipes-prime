@@ -19,6 +19,7 @@
       ></button>
     </p-fieldset>
   </div>
+
   <div class="col-12 md:col-6">
     <p-fieldset legend="i18nPluralPipe" [toggleable]="true">
       <p>
@@ -31,6 +32,39 @@
         class="p-button-danger"
         (click)="deleteClient()"
       ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="SlicePipe" [toggleable]="true">
+      <div>
+        <strong>Original</strong>
+        <pre>{{ clients }}</pre>
+      </div>
+      <div>
+        <strong>slice:0:2</strong>
+        <pre>{{ clients | slice: 0:2 }}</pre>
+      </div>
+      <div>
+        <strong>slice:0:4</strong>
+        <pre>{{ name | slice: 0:4 }}</pre>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="SlicePipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          {{ item.key }}: {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="JsonPipe" [toggleable]="true">
+      <pre>{{ heroes | json }}</pre>
     </p-fieldset>
   </div>
 </div>

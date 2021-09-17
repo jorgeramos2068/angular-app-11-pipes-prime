@@ -14,12 +14,36 @@ export class NotCommonComponent {
   };
 
   // i18nPlural
-  clients: string[] = ['Mary', 'Diana', 'John'];
+  clients: string[] = ['Mary', 'Diana', 'John', 'Paul', 'Ringo'];
   clientsMap = {
     '=0': 'no clients',
     '=1': 'one client',
     other: '# clients',
   };
+
+  // KeyValue
+  person = {
+    name: 'Bruce',
+    lastName: 'Wayne',
+    age: 40,
+    city: 'Gotham City',
+  };
+
+  // JsonPipe
+  heroes = [
+    {
+      name: 'Superman',
+      fullName: 'Clark Kent',
+    },
+    {
+      name: 'Batman',
+      fullName: 'Bruce Wayne',
+    },
+    {
+      name: 'Wonder Woman',
+      fullName: 'Diana Prince',
+    },
+  ];
 
   changePerson(): void {
     if (this.gender === 'female') {
