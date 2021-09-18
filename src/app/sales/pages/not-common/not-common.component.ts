@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-not-common',
@@ -62,4 +63,12 @@ export class NotCommonComponent {
       this.clients = ['Mary', 'Diana', 'John'];
     }
   }
+
+  // Async Pipe
+  myObservable = interval(1000);
+  promiseValue = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data is ok');
+    }, 3000);
+  });
 }
