@@ -9,6 +9,7 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
 import { FlyPipe } from './pipes/fly.pipe';
 import { MyUpperPipe } from './pipes/myupper.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MyUpperPipe } from './pipes/myupper.pipe';
     SortComponent,
     FlyPipe,
     MyUpperPipe,
+    SortPipe,
   ],
   imports: [CommonModule, PrimeNgModule],
   exports: [

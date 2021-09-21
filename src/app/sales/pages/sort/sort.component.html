@@ -19,25 +19,28 @@
       label="By name"
       icon="pi pi-sort"
       class="p-button-info mr-2"
+      (click)="changeSortBy('name')"
     ></button>
     <button
       pButton
-      label="By values"
+      label="By power to fly"
       icon="pi pi-sort"
       class="p-button-success mr-2"
+      (click)="changeSortBy('fly')"
     ></button>
     <button
       pButton
       label="By color"
       icon="pi pi-sort"
       class="p-button-help"
+      (click)="changeSortBy('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid mt-3">
   <div class="col-12">
-    <p-table [value]="heroes" responsiveLayout="scroll">
+    <p-table [value]="heroes | sort: sortBy" responsiveLayout="scroll">
       <ng-template pTemplate="header">
         <tr>
           <th>Name</th>
@@ -48,7 +51,7 @@
       <ng-template pTemplate="body" let-hero>
         <tr>
           <td>{{ hero.name }}</td>
-          <td>{{ hero.fly | fly }}</td>
+          <td>{{ hero.fly | fly | titlecase }}</td>
           <td>{{ hero.color }}</td>
         </tr>
       </ng-template>
