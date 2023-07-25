@@ -7,7 +7,7 @@ import { Color, Hero } from '../../interfaces/hero.interface';
 })
 export class SortComponent {
   public upperFlag: boolean = true;
-  heroes: Hero[] = [
+  public heroes: Hero[] = [
     {
       name: 'Superman',
       fly: true,
@@ -34,8 +34,13 @@ export class SortComponent {
       color: Color.orange,
     },
   ];
+  public sortBy: string = '';
 
   changeUpperFlag(): void {
     this.upperFlag = !this.upperFlag;
+  }
+
+  changeSortBy(value: string): void {
+    this.sortBy = value;
   }
 }

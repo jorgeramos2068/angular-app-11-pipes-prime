@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FlyPipe implements PipeTransform {
   transform(value: boolean): string {
-    return value ? 'Fly' : "Don't fly";
+    return value ? 'fly' : "don't fly";
   }
 }
