@@ -4,4 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-not-common',
   templateUrl: './not-common.component.html',
 })
-export class NotCommonComponent {}
+export class NotCommonComponent {
+  public name: string = 'Catwoman';
+  public gender: string = 'female';
+  public invitationMap = {
+    male: 'him',
+    female: 'her',
+  };
+}
