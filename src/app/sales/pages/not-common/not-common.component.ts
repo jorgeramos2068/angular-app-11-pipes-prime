@@ -20,4 +20,22 @@ export class NotCommonComponent {
     '=1': 'one client',
     other: '# clients',
   };
+
+  changePerson(): void {
+    if (this.gender === 'female') {
+      this.name = 'Batman';
+      this.gender = 'male';
+    } else {
+      this.name = 'Catwoman';
+      this.gender = 'female';
+    }
+  }
+
+  deleteClient(): void {
+    if (this.clients.length > 0) {
+      this.clients.pop();
+    } else {
+      this.clients = ['Mary', 'Diana', 'John'];
+    }
+  }
 }
