@@ -7,6 +7,8 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NotCommonComponent } from './pages/not-common/not-common.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
+import { FlyPipe } from './pipes/fly.pipe';
+import { MyUpperPipe } from './pipes/myupper.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { SortComponent } from './pages/sort/sort.component';
     NotCommonComponent,
     BasicsComponent,
     SortComponent,
+    FlyPipe,
+    MyUpperPipe,
   ],
   imports: [CommonModule, PrimeNgModule],
   exports: [
